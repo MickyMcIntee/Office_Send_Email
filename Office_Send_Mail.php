@@ -28,7 +28,7 @@
             $this->tenantId = $tenantId;
             $this->clientId = $clientId;
             $this->clientSecret = $clientSecret;
-            $this->redirect_uri = (isset($_SERVER['HTTPS'])) ? "https://" : "http://" . $_SERVER['HTTP_HOST'] . htmlspecialchars($_SERVER['PHP_SELF']);
+            $this->redirect_uri = ((isset($_SERVER['HTTPS'])) ? "https://" : "http://") . $_SERVER['HTTP_HOST'] . htmlspecialchars($_SERVER['PHP_SELF']);
             $this->base_uri = "https://login.microsoftonline.com/$tenantId/oauth2/v2.0/";
             
             if($this->check_refresh_date()) {
