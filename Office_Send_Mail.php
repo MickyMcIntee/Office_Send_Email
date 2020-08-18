@@ -77,7 +77,7 @@
                 
             } else {
                 
-                if(!$this->check_refresh_ini()) {
+                if(!$this->check_refresh_date()) {
                     
                     $this->update_create_refresh_ini();
                     
